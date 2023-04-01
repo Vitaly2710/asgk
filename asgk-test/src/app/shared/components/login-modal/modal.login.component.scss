@@ -1,0 +1,32 @@
+@import "../../../../scss/variables";
+
+:host {
+  .container {
+    width: 80vh;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $modal-background;
+    margin: auto;
+
+    .wrapper {
+      position: relative;
+
+      .background {
+        position: absolute;
+        display: flex;
+
+        .left-side {
+          flex: 1;
+        }
+
+        .right-side {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+}
