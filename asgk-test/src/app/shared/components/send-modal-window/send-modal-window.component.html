@@ -1,0 +1,7 @@
+<div class="wrapper" [class.visible]="showWindow">
+  <p class="title">Modal window for send push-message</p>
+  <div class="buttons">
+    <button class="perform">Send</button>
+    <button class="cancel" (click)="changeModalView.emit(!showWindow)">Cancel</button>
+  </div>
+</div>

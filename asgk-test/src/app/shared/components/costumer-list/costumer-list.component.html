@@ -25,7 +25,8 @@
     <td>{{dessert.status}}</td>
     <td>{{dessert.job}}</td>
     <td>{{dessert.city}}</td>
-    <td><button>Send message</button></td>
+    <button (click)="sendMessage($event)">Send message</button>
   </tr>
 </table>
+<app-send-modal-window [params]="selectedRow" [showWindow]="isOpenWindow" (changeModalView)="isOpenWindow = $event"></app-send-modal-window>
 

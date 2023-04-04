@@ -1,0 +1,51 @@
+@import "src/scss/variables";
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #beffec;
+  width: 50vh;
+  height: 20vh;
+  border-radius: 1rem;
+  opacity: 0;
+
+  .title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2rem;
+  }
+
+  .buttons {
+    margin-top: 5rem;
+    text-align: center;
+
+    .cancel {
+      margin-left: 1rem;
+      width: 20%;
+      background-color: red;
+      color: #FFFFFF;
+      padding: 2% 5% 2% 5%;
+      border: none;
+      border-radius: $size-xxl;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .perform {
+      width: 20%;
+      background-color: green;
+      color: #FFFFFF;
+      padding: 2% 5% 2% 5%;
+      border: none;
+      border-radius: $size-xxl;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.visible {
+  opacity: 100;
+}

@@ -16,6 +16,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import { CostumerListComponent } from './shared/components/costumer-list/costumer-list.component';
 import { SearchElementComponent } from './shared/components/search-element/search-element.component';
 import {MatIconModule} from "@angular/material/icon";
+import { SendModalWindowComponent } from './shared/components/send-modal-window/send-modal-window.component';
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 
 const appRoutes: Routes =[
   { path: '', component: LoginComponent},
@@ -30,7 +32,8 @@ const appRoutes: Routes =[
     LoginFormComponent,
     MainComponent,
     CostumerListComponent,
-    SearchElementComponent
+    SearchElementComponent,
+    SendModalWindowComponent
   ],
     imports: [
         BrowserModule,
@@ -41,7 +44,8 @@ const appRoutes: Routes =[
         MatSortModule,
         BrowserAnimationsModule,
         MatFormFieldModule,
-        MatIconModule
+        MatIconModule,
+        MatDialogModule
     ],
   providers: [HttpClientModule],
   exports: [

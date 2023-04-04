@@ -9,4 +9,5 @@ export interface Person {
   status: string;
   job: string;
   city: string;
+  send: boolean;
 }
