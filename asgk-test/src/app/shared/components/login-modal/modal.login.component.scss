@@ -1,0 +1,48 @@
+@import "../../../../scss/variables";
+
+:host {
+  .wrapperLogin {
+    width: 134vh;
+    height: 70vh;
+    background-color: $modal-background;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 5px 40px 12px rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+
+    .left-side {
+      flex: 1;
+
+      .left-side-container {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 50%;
+      }
+
+      p {
+        margin-top: 20%;
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .right-side {
+      flex: 2;
+      background-image: url("~src/assets/login_background.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -moz-border-radius-topright: 1rem;
+      -moz-border-radius-bottomright: 1rem;
+    }
+  }
+
+  }

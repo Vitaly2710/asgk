@@ -1,0 +1,15 @@
+<form class="login-form" [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+  <div class="form-group-login">
+    <label>Имя</label>
+    <input class="form-control" name="name" formControlName="userName" [class.empty]="loginEmpty" placeholder="login"/>
+  </div>
+  <div class="form-group-password">
+    <label>Password</label>
+    <input class="form-control" name="email" formControlName="userPassword" type="password" [class.empty]="passwordEmpty" placeholder="password"/>
+  </div>
+  <div class="form-group-button">
+    <button class="btn btn-default">
+      Войти
+    </button>
+  </div>
+</form>`
