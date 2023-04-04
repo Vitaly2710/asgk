@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LoginInterfaces} from "../../interfaces/login.interfaces";
 
 @Component({
   selector: 'modal-login',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal.login.component.scss']
 })
 export class ModalLoginComponent {
-  title = 'asgk-test';
+  title = 'login';
+
+  logIn(event: LoginInterfaces) {
+    console.log(event)
+  }
 }

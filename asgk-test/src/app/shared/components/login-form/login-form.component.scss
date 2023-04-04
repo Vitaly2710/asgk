@@ -1,0 +1,62 @@
+@import "src/scss/mixins/mixins";
+@import "src/scss/variables";
+
+.login-form {
+    margin-top: $size-l ;
+
+  label {
+    color: $grey-text-color;
+    font-size: $size-l;
+  }
+
+  .form-group-login {
+    margin-top: $size-s;
+    @include flex(space-evenly);
+
+    input {
+      transform: translate(0.9rem, 0rem);
+      @include border();
+    }
+
+    .empty {
+      border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  .form-group-password {
+    margin-top: $size-s;
+    @include flex(space-evenly);
+
+    input {
+      @include border();
+    }
+
+    .empty {
+      border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  .form-group-button {
+    margin-top: $size-l;
+
+    button {
+      width: 50%;
+      background-color: $primary-color;
+      color: #FFFFFF;
+      padding: 2% 10% 2% 10%;
+      border: none;
+      border-radius: $size-xxl;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+
+    button:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+
+
+
