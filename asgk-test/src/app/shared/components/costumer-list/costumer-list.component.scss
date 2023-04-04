@@ -1,0 +1,17 @@
+@import "src/scss/variables";
+
+table{
+  margin-top: 2rem;
+}
+
+th,
+td {
+  text-align: center;
+  border: 1px solid black;
+}
+
+button {
+  background-color: $primary-color;
+  color: white;
+}
+

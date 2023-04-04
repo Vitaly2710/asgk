@@ -1,0 +1,31 @@
+<app-search-element [list]="sortedData" (filteredList)="filteredCostumers($event)"></app-search-element>
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="name">Name</th>
+    <th mat-sort-header="sex">Sex</th>
+    <th mat-sort-header="age">Age</th>
+    <th mat-sort-header="growth">Growth</th>
+    <th mat-sort-header="nationality">Nationality</th>
+    <th mat-sort-header="weight">Weight</th>
+    <th mat-sort-header="eye">Eye color</th>
+    <th mat-sort-header="status">Family status</th>
+    <th mat-sort-header="job">Job</th>
+    <th mat-sort-header="city">City of residence</th>
+    <th mat-sort-header="message">message</th>
+  </tr>
+
+  <tr *ngFor="let dessert of sortedData">
+    <td>{{dessert.name}}</td>
+    <td>{{dessert.sex}}</td>
+    <td>{{dessert.age}}</td>
+    <td>{{dessert.growth}}</td>
+    <td>{{dessert.nationality}}</td>
+    <td>{{dessert.weight}}</td>
+    <td>{{dessert.eye}}</td>
+    <td>{{dessert.status}}</td>
+    <td>{{dessert.job}}</td>
+    <td>{{dessert.city}}</td>
+    <td><button>Send message</button></td>
+  </tr>
+</table>
+
