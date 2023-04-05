@@ -18,6 +18,13 @@ import { SearchElementComponent } from './shared/components/search-element/searc
 import {MatIconModule} from "@angular/material/icon";
 import { SendModalWindowComponent } from './shared/components/send-modal-window/send-modal-window.component';
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFireMessagingModule} from "@angular/fire/compat/messaging";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
+import {MessagingService} from "./shared/services/service/messaging.service";
+import {AsyncPipe} from "@angular/common";
 
 const appRoutes: Routes =[
   { path: '', component: LoginComponent},
@@ -45,9 +52,13 @@ const appRoutes: Routes =[
         BrowserAnimationsModule,
         MatFormFieldModule,
         MatIconModule,
-        MatDialogModule
+        MatDialogModule,
+        AngularFireDatabaseModule,
+        AngularFireAuthModule,
+        AngularFireMessagingModule,
+        AngularFireModule.initializeApp(environment.firebase),
     ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, MessagingService,AsyncPipe],
   exports: [
     ModalLoginComponent,
   ],
